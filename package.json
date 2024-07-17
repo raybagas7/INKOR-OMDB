@@ -16,6 +16,7 @@
     "test-husk": "npm run check-format && npm run lint && npm run check-types && npm run build"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.51.4",
     "axios": "^1.7.2",
     "next": "14.2.5",
     "react": "^18",
