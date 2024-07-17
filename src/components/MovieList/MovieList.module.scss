@@ -1,1 +1,36 @@
 @import "@/styles/index.module.scss";
+
+.list_title {
+  padding: 12px 12px 0px 12px;
+}
+
+.movie_list_container {
+  display: flex;
+  overflow-y: scroll;
+  padding: 12px;
+  gap: 12px;
+
+  ::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
+.movie_list_container {
+  -ms-overflow-style: none;
+}
+
+.movie_list_container::-webkit-scrollbar {
+  display: none;
+}
