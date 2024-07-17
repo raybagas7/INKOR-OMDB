@@ -5,7 +5,8 @@
   min-height: 100dvh;
 
   @include media(">tablet") {
-    padding-left: 200px;
+    padding: 0px 200px;
+    background-color: $secondary;
   }
 }
 

@@ -1,9 +1,14 @@
 @import "@/styles/index.module.scss";
 
 .movie_card {
+  min-height: 189px;
+  min-width: 128px;
+
+  @include media(">tablet") {
+    min-height: 300px;
+    min-width: 200px;
+  }
   img {
-    min-height: 189px;
-    min-width: 128px;
     border-radius: 10px;
     box-shadow:
       0 1px 3px 0 rgba(0, 0, 0, 0.25),

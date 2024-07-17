@@ -8,11 +8,12 @@ const MovieCard = ({ Title, Year, imdbID, Type, Poster }: Movies) => {
   return (
     <div className={style.movie_card}>
       <Image
-        style={{ objectFit: "cover" }}
+        style={{ objectFit: "cover", width: "100%", height: "100%" }}
         alt={Title}
         src={Poster}
-        height={189}
-        width={128}
+        height={300}
+        width={200}
+        priority
       />
     </div>
   );
