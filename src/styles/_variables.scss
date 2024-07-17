@@ -1,11 +1,11 @@
 // theme colors
-$primary: #4dc7a2 !default;
-$secondary: #f5f5f5 !default;
+$primary: #0f4c75 !default;
+$secondary: #bbe1fa !default;
 $error: #d32752 !default;
-$info: #f6c31c !default;
+$info: #f08a5d !default;
 $muted: #cecece !default;
-$primaryBg: #ffffff !default;
-$border: #c2cfd6 !default;
+$primaryBg: #1b262c !default;
+$border: #3282b8 !default;
 
 // color palette
 $colors: (
@@ -15,7 +15,7 @@ $colors: (
   "info": $info,
   "black": black,
   "white": white,
-  "outline": #ffffff00,
+  "outline": #3282b800,
 );
 
 // spacing

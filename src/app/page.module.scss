@@ -1,5 +1,10 @@
 @import "@/styles/index.module.scss";
 
 .main_container {
-  background-color: $primary;
+  background-color: $primaryBg;
+  min-height: 100dvh;
+
+  @include media(">tablet") {
+    padding-left: 200px;
+  }
 }
