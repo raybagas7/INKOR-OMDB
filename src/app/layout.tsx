@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import TopNavigation from "@/components/Navigation/TopNavigation/TopNavigation";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <TopNavigation />
-        {children}
+        <TopNavigation children={children} />
       </body>
     </html>
   );

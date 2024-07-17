@@ -8,3 +8,15 @@
     padding-left: 200px;
   }
 }
+
+.main_container_loading {
+  background-color: $primaryBg;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media(">tablet") {
+    padding-left: 200px;
+  }
+}

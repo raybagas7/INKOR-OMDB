@@ -14,8 +14,10 @@ axios.interceptors.request.use((config) => {
 const responseBody = (response: AxiosResponse) => response.data;
 
 const request = {
-  get: (url: string = "", params?: object) =>
-    axios.get(url, { params }).then(responseBody),
+  get: async (url: string = "", params: ApiSearchParam, pageParam: number) => {
+    params = { ...params, page: pageParam };
+    return axios.get(url, { params }).then(responseBody);
+  },
   post: (url: string = "", data?: object) =>
     axios.post(url, data).then(responseBody),
   put: (url: string = "", data?: object) =>
@@ -24,7 +26,17 @@ const request = {
 };
 
 const Movie = {
-  list: (query: object) => request.get("", query),
+  list: async (
+    pageParam: number,
+    query: ApiSearchParam,
+  ): Promise<SearchMovies> => {
+    try {
+      const movies = await request.get("", query, pageParam);
+      return movies;
+    } catch (error) {
+      throw new Error("Failed to fetch movies");
+    }
+  },
 };
 
 const agent = {
