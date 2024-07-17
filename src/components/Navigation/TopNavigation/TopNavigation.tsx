@@ -5,6 +5,7 @@ import { IoPersonCircle } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiSearch } from "react-icons/bi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Link from "next/link";
 
 interface Props {
   children: ReactNode;
@@ -22,10 +23,12 @@ const TopNavigation = ({ children }: Props) => {
     <QueryClientProvider client={queryClient}>
       <div className={styles.top_nav_container}>
         <GiHamburgerMenu className={styles.icon} />
-        <div>Inkor Movie</div>
+        <Link href={"/"}>Inkor Movie</Link>
         <div className={styles.right_box}>
           <BiSearch className={styles.icon} />
-          <IoPersonCircle className={styles.icon} />
+          <Link href={"/profile"}>
+            <IoPersonCircle className={styles.icon} />
+          </Link>
         </div>
       </div>
       {children}

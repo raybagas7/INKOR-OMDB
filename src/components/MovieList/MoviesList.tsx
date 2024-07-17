@@ -5,13 +5,17 @@ import React from "react";
 import styles from "./MovieList.module.scss";
 import MovieCard from "../MovieCard/MovieCard";
 
-const MoviesList = () => {
+interface Props {
+  movieSearch?: string;
+}
+
+const MoviesList = ({ movieSearch = "Marvel" }: Props) => {
   const { data: movies, isPending } = useQuery({
-    queryKey: ["movie-list"],
+    queryKey: ["movie-list", movieSearch],
     queryFn: async () =>
       agent.Movie.list(1, {
         type: "movie",
-        s: "marvel",
+        s: movieSearch,
         r: "json",
       }),
   });
@@ -26,7 +30,7 @@ const MoviesList = () => {
   }
   return (
     <div>
-      <div className={styles.list_title}>Marvel Movie</div>
+      <div className={styles.list_title}>{movieSearch} Movie</div>
       <div className={styles.movie_list_container}>
         {movies?.Search.map((movie) => (
           <MovieCard key={movie.imdbID} {...movie} />

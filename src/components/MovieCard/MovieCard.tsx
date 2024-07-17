@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import { LiaImdb } from "react-icons/lia";
 
 const MovieCard = ({ Title, Year, imdbID, Type, Poster }: Movies) => {
-  console.log(Year, imdbID, Type);
-
   return (
     <motion.div
       className={style.movie_card_container}
