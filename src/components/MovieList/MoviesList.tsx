@@ -4,13 +4,15 @@ import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import styles from "./MovieList.module.scss";
 import MovieCard from "../MovieCard/MovieCard";
+import MovieCardSkeleton from "../MovieCard/MovieCardSkeleton";
 
 interface Props {
   movieSearch?: string;
 }
 
 const MoviesList = ({ movieSearch = "Marvel" }: Props) => {
-  const { data: movies, isPending } = useQuery({
+  const skeletonCards = new Array(7).fill(null);
+  const { data: movies, isLoading } = useQuery({
     queryKey: ["movie-list", movieSearch],
     queryFn: async () =>
       agent.Movie.list(1, {
@@ -19,15 +21,20 @@ const MoviesList = ({ movieSearch = "Marvel" }: Props) => {
         r: "json",
       }),
   });
-  console.log(movies);
 
-  if (isPending) {
+  if (isLoading) {
     return (
-      <main>
-        <p>Loading...</p>
-      </main>
+      <div>
+        <div className={styles.list_title}>{movieSearch} Movie</div>
+        <div className={styles.movie_list_container}>
+          {skeletonCards.map((_, index) => (
+            <MovieCardSkeleton key={`${movieSearch}-${index}`} />
+          ))}
+        </div>
+      </div>
     );
   }
+
   return (
     <div>
       <div className={styles.list_title}>{movieSearch} Movie</div>

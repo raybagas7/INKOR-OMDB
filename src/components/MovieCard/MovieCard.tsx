@@ -9,7 +9,7 @@ const MovieCard = ({ Title, Year, imdbID, Type, Poster }: Movies) => {
     <motion.div
       className={style.movie_card_container}
       whileTap={{ scale: 1 }}
-      whileHover={{ scale: 1.1 }}
+      whileHover={{ scale: 1.05 }}
     >
       <motion.div className={style.movie_card}>
         <Image

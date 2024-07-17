@@ -1,0 +1,27 @@
+@import "@/styles/index.module.scss";
+
+.movie_card_container_skeleton {
+  min-height: 189px;
+  max-height: 189px;
+  min-width: 128px;
+  border-radius: 10px;
+  background-color: #0f4c75;
+  animation: skeleton-animation 1.5s infinite alternate;
+
+  @include media(">tablet") {
+    min-height: 300px;
+    min-width: 200px;
+  }
+}
+
+@keyframes skeleton-animation {
+  0% {
+    background-color: rgb(15, 76, 117);
+  }
+  50% {
+    background-color: rgba(15, 76, 117, 0.25);
+  }
+  100% {
+    background-color: #0f4c75;
+  }
+}
