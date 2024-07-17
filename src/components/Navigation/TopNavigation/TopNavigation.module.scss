@@ -2,4 +2,24 @@
 
 .top_nav_container {
   background-color: $primary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+  .icon {
+    font-size: 20px;
+    :hover {
+      color: $secondary;
+    }
+  }
+
+  .right_box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 }
