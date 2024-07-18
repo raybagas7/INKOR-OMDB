@@ -1,0 +1,44 @@
+@import "@/styles/index.module.scss";
+
+.input_container_base {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0px 20px;
+  position: relative;
+
+  label {
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+
+  input {
+    background-color: $primary;
+    height: 42px;
+    border: $border solid 1px;
+    border-radius: 8px;
+    font-size: 14px;
+    padding-left: 12px;
+    min-width: none;
+    &:focus {
+      outline: $primary solid 1px;
+    }
+  }
+
+  input::placeholder {
+    color: rgb(255, 255, 255, 0.75);
+  }
+
+  .icon {
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    align-self: flex-end;
+    padding-right: 12px;
+  }
+}

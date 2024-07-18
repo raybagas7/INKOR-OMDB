@@ -1,7 +1,9 @@
 import React from "react";
 
-const page = () => {
-  return <div>page</div>;
+const SearchPage = ({ params }: { params: { id: string } }) => {
+  console.log(params);
+
+  return <div>{params.id}</div>;
 };
 
-export default page;
+export default SearchPage;

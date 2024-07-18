@@ -13,19 +13,35 @@
 
   .icon {
     font-size: 20px;
-
-    :hover {
-      color: $secondary;
-    }
   }
 
   .right_box {
     display: flex;
     align-items: center;
     gap: 10px;
+
     a {
       width: 20px;
       height: 20px;
+
+      &:hover > .icon {
+        color: $secondary;
+      }
+    }
+
+    .search_button {
+      background: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+
+      &:hover > .icon {
+        color: $secondary;
+      }
     }
   }
 }

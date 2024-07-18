@@ -6,12 +6,21 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { BiSearch } from "react-icons/bi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Link from "next/link";
+import { usePopup } from "@/store/usePopUp";
+import PopUp from "@/components/ui/PopUp/PopUp";
+import SearchField from "../SearchField/SearchField";
 
 interface Props {
   children: ReactNode;
 }
 
 const TopNavigation = ({ children }: Props) => {
+  const { showPopup } = usePopup();
+
+  const onPopSearchBox = () => {
+    showPopup(<SearchField />);
+  };
+
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -22,10 +31,13 @@ const TopNavigation = ({ children }: Props) => {
   return (
     <QueryClientProvider client={queryClient}>
       <div className={styles.top_nav_container}>
+        <PopUp backDropClose />
         <GiHamburgerMenu className={styles.icon} />
         <Link href={"/"}>Inkor Movie</Link>
         <div className={styles.right_box}>
-          <BiSearch className={styles.icon} />
+          <button className={styles.search_button}>
+            <BiSearch className={styles.icon} onClick={onPopSearchBox} />
+          </button>
           <Link href={"/profile"}>
             <IoPersonCircle className={styles.icon} />
           </Link>
