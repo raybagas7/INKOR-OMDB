@@ -7,7 +7,7 @@
     background-color: transparent;
     display: flex;
     justify-content: space-between;
-    padding: 8px 0;
+    padding: 8px 4px;
     font-size: 14px;
     font-weight: 600;
     width: 100%;
@@ -17,12 +17,12 @@
       display: none;
     }
 
-    &:hover > .title {
-      color: $secondary;
-    }
-
     .icon {
       font-size: 20px;
     }
+  }
+
+  .collapse_button:hover {
+    background-color: rgb(187, 225, 250, 0.25);
   }
 }

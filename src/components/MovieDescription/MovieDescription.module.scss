@@ -24,6 +24,7 @@
   .movie_information {
     .movie_genres {
       display: flex;
+      flex-wrap: wrap;
       gap: 4px;
 
       p {

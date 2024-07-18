@@ -7,6 +7,8 @@
   overflow: hidden;
   .crew_grid {
     display: grid;
+    padding: 0 4px;
+
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     font-size: 12px;
