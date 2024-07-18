@@ -2,6 +2,9 @@
 
 .search_form_container {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   top: 72px;
   width: 100%;
 

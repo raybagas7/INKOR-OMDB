@@ -6,6 +6,12 @@
   gap: 8px;
   padding: 0px 20px;
   position: relative;
+  max-width: 350px;
+  width: 100%;
+
+  @include media(">tablet") {
+    max-width: 800px;
+  }
 
   label {
     font-size: 14px;
