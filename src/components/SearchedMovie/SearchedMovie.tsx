@@ -28,11 +28,16 @@ const SearchedMovie = ({ type, title }: Props) => {
   };
 
   if (isError) {
-    return <p>Its error</p>;
+    return <p>Movies not found</p>;
   }
 
   return (
-    <div>
+    <section className={styles.result_section}>
+      <div className={styles.result_header}>
+        <h1>
+          {type} - {title} Result
+        </h1>
+      </div>
       {isPending && !searchedMovies ? (
         <p>Loading</p>
       ) : (
@@ -64,7 +69,7 @@ const SearchedMovie = ({ type, title }: Props) => {
           )}
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

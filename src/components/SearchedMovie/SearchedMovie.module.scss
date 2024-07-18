@@ -1,18 +1,28 @@
 @import "@/styles/index.module.scss";
 
-.searched_container {
-  padding: 12px;
+.result_section {
+  .result_header {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    h1 {
+      text-transform: capitalize;
+    }
+  }
+  .searched_container {
+    padding: 12px;
 
-  .title_box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    width: 100%;
-    margin-top: 20px;
+    .title_box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 100%;
+      margin-top: 20px;
 
-    @include media(">tablet") {
-      padding: 20px;
-      grid-template-columns: repeat(5, 1fr);
+      @include media(">tablet") {
+        padding: 20px;
+        grid-template-columns: repeat(5, 1fr);
+      }
     }
   }
 }
