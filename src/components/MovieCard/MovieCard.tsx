@@ -3,7 +3,7 @@ import style from "./MovieCard.module.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { LiaImdb } from "react-icons/lia";
-import Badge from "../Badge/Badge";
+import Badge from "../ui/Badge/Badge";
 import Link from "next/link";
 
 const MovieCard = ({ Title, Year, imdbID, Type, Poster }: Movies) => {
