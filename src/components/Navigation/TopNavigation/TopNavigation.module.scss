@@ -20,13 +20,12 @@
     align-items: center;
     gap: 10px;
 
-    a {
-      width: 20px;
-      height: 20px;
+    .icon {
+      cursor: pointer;
+    }
 
-      &:hover > .icon {
-        color: $secondary;
-      }
+    &:hover > .icon {
+      color: $secondary;
     }
 
     .search_button {

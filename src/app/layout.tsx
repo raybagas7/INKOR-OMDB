@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
-import TopNavigation from "@/components/Navigation/TopNavigation/TopNavigation";
+import MobileSideBar from "@/components/Navigation/MobileSideBar/MobileSideBar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <TopNavigation>{children}</TopNavigation>
+        {/* <TopNavigation>{children}</TopNavigation> */}
+        <MobileSideBar>{children}</MobileSideBar>
       </body>
     </html>
   );

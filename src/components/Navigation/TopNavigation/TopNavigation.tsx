@@ -12,9 +12,10 @@ import SearchField from "../SearchField/SearchField";
 
 interface Props {
   children: ReactNode;
+  toggleAside: () => void;
 }
 
-const TopNavigation = ({ children }: Props) => {
+const TopNavigation = ({ children, toggleAside }: Props) => {
   const { showPopup } = usePopup();
 
   const onPopSearchBox = () => {
@@ -32,15 +33,13 @@ const TopNavigation = ({ children }: Props) => {
     <QueryClientProvider client={queryClient}>
       <div className={styles.top_nav_container}>
         <PopUp backDropClose />
-        <GiHamburgerMenu className={styles.icon} />
+        <GiHamburgerMenu onClick={toggleAside} className={styles.icon} />
         <Link href={"/"}>Inkor Movie</Link>
         <div className={styles.right_box}>
           <button className={styles.search_button}>
             <BiSearch className={styles.icon} onClick={onPopSearchBox} />
           </button>
-          <Link href={"/profile"}>
-            <IoPersonCircle className={styles.icon} />
-          </Link>
+          <IoPersonCircle className={styles.icon} />
         </div>
       </div>
       {children}
