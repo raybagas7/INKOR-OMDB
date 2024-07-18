@@ -1,0 +1,49 @@
+@import "@/styles/index.module.scss";
+
+.movie_description_section {
+  padding: 16px;
+  display: flex;
+  gap: 10px;
+
+  .movie_poster_box {
+    position: relative;
+    min-height: 189px;
+    max-height: 189px;
+    min-width: 128px;
+    max-width: 120px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @include media(">tablet") {
+      min-height: 300px;
+      max-width: 200px;
+    }
+  }
+
+  .movie_information {
+    .movie_genres {
+      display: flex;
+      gap: 4px;
+
+      p {
+        font-size: 0.75rem;
+        color: black;
+      }
+    }
+
+    .movie_plot_box {
+      margin-top: 10px;
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+        line-clamp: 7;
+        font-size: 0.85rem;
+      }
+    }
+  }
+}

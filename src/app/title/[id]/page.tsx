@@ -1,6 +1,8 @@
 import React from "react";
+import styles from "./page.module.scss";
 
 import type { Metadata } from "next";
+import MovieDescription from "@/components/MovieDescription/MovieDescription";
 
 const getMovieDetail = async (id: string): Promise<MovieDetail> => {
   const response = await fetch(
@@ -24,8 +26,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const movieDetail = await getMovieDetail(id);
 
-  console.log(movieDetail);
-
   return {
     title: `${movieDetail.Title} - ${movieDetail.Year}`,
   };
@@ -37,8 +37,8 @@ const TitlePage = async ({ params }: { params: { id: string } }) => {
 
   return (
     <>
-      <main>
-        <p style={{ color: "black" }}>{params.id}</p>
+      <main className={styles.main_container}>
+        <MovieDescription movieDetail={movieDetail} />
       </main>
     </>
   );
