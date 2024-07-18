@@ -43,7 +43,7 @@ export default function Home() {
     },
   ];
   return (
-    <main className={styles.main_container}>
+    <main className={styles.main_home_container}>
       <Virtuoso
         data={MovieCategories}
         itemContent={(index, category) => {

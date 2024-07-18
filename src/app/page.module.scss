@@ -10,6 +10,12 @@
   }
 }
 
+.main_home_container {
+  background-color: $primaryBg;
+  min-height: 100dvh;
+  color: white;
+}
+
 .main_container_loading {
   background-color: $primaryBg;
   min-height: 100dvh;

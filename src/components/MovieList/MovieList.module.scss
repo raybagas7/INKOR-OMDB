@@ -4,6 +4,11 @@
   padding: 12px 12px 0px 12px;
   display: flex;
 
+  @include media(">tablet") {
+    padding: 20px 20px 0px 20px;
+    font-size: 22px;
+  }
+
   .search_title {
     font-weight: bold;
   }
