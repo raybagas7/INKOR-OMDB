@@ -1,0 +1,14 @@
+@import "@/styles/index.module.scss";
+
+.crew_box {
+  border: none;
+  border-top: $primary solid 1px;
+  border-bottom: $primary solid 1px;
+  overflow: hidden;
+  .crew_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    font-size: 12px;
+  }
+}

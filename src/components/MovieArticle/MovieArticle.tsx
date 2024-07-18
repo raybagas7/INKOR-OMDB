@@ -3,6 +3,7 @@ import styles from "./MovieArticle.module.scss";
 import MovieDescription from "../MovieDescription/MovieDescription";
 import MovieRating from "../MovieRating/MovieRating";
 import MovieHeader from "../MovieHeader/MovieHeader";
+import MovieCrew from "../MovieCrew/MovieCrew";
 
 interface Props {
   movieDetail: MovieDetail;
@@ -26,6 +27,11 @@ const MovieArticle = ({ movieDetail }: Props) => {
         genre={movieDetail.Genre}
       />
       <MovieRating ratings={movieDetail.Ratings} />
+      <MovieCrew
+        director={movieDetail.Director}
+        writer={movieDetail.Writer}
+        actors={movieDetail.Actors}
+      />
     </article>
   );
 };
