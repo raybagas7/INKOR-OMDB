@@ -1,0 +1,12 @@
+@import "@/app/page.module.scss";
+
+.title_page_box {
+  padding-top: 12px;
+  h1 {
+    padding-left: 12px;
+
+    @include media(">tablet") {
+      padding-left: 20px;
+    }
+  }
+}

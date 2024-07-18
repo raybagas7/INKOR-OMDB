@@ -11,8 +11,43 @@
   z-index: 5;
   color: white;
 
+  nav {
+    display: none;
+    @include media(">tablet") {
+      display: block;
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
   .icon {
     font-size: 20px;
+    cursor: pointer;
+  }
+
+  .icon:hover {
+    color: $secondary;
+  }
+
+  .icon_hamburger {
+    font-size: 20px;
+    cursor: pointer;
+    @include media(">tablet") {
+      display: none;
+    }
+  }
+
+  .icon_hamburger:hover {
+    color: $secondary;
+  }
+
+  .web_name {
+    @include media(">tablet") {
+      font-size: 18px;
+    }
   }
 
   .right_box {
@@ -22,6 +57,9 @@
 
     .icon {
       cursor: pointer;
+      @include media(">tablet") {
+        font-size: 30px;
+      }
     }
 
     &:hover > .icon {

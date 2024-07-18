@@ -9,6 +9,7 @@ import Link from "next/link";
 import { usePopup } from "@/store/usePopUp";
 import PopUp from "@/components/ui/PopUp/PopUp";
 import SearchField from "../SearchField/SearchField";
+import ListNavigation from "../ListNavigation/ListNavigation";
 
 interface Props {
   children: ReactNode;
@@ -33,8 +34,20 @@ const TopNavigation = ({ children, toggleAside }: Props) => {
     <QueryClientProvider client={queryClient}>
       <div className={styles.top_nav_container}>
         <PopUp backDropClose />
-        <GiHamburgerMenu onClick={toggleAside} className={styles.icon} />
-        <Link href={"/"}>Inkor Movie</Link>
+        <GiHamburgerMenu
+          onClick={toggleAside}
+          className={styles.icon_hamburger}
+        />
+        <Link className={styles.web_name} href={"/"}>
+          Inkor Movie
+        </Link>
+        <nav>
+          <ul>
+            <ListNavigation name="Home" to="/" />
+            <ListNavigation name="Movie" to="/" />
+            <ListNavigation name="Series" to="/" />
+          </ul>
+        </nav>
         <div className={styles.right_box}>
           <button className={styles.search_button}>
             <BiSearch className={styles.icon} onClick={onPopSearchBox} />

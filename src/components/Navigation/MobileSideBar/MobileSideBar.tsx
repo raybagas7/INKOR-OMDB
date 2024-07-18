@@ -4,8 +4,10 @@ import React, { useEffect, useState } from "react";
 import TopNavigation from "../TopNavigation/TopNavigation";
 import styles from "./MobileSideBar.module.scss";
 import ListNavigation from "../ListNavigation/ListNavigation";
-import { RiListOrdered } from "react-icons/ri";
 import { usePathname } from "next/navigation";
+import { MdLocalMovies } from "react-icons/md";
+import { BsCameraVideoFill } from "react-icons/bs";
+import { FaHome } from "react-icons/fa";
 
 interface Props {
   children: React.ReactNode;
@@ -84,21 +86,21 @@ const MobileSideBar = ({ children }: Props) => {
                 name="Home"
                 to="/"
                 onClick={() => setAsideHide(false)}
-                icon={<RiListOrdered />}
+                icon={<FaHome />}
                 isActive={activePage === "home"}
               />
               <ListNavigation
                 name="Movies"
                 to="/movies"
                 onClick={() => setAsideHide(false)}
-                icon={<RiListOrdered />}
+                icon={<MdLocalMovies />}
                 isActive={activePage === "movie"}
               />
               <ListNavigation
                 name="Series"
                 to="/series"
                 onClick={() => setAsideHide(false)}
-                icon={<RiListOrdered />}
+                icon={<BsCameraVideoFill />}
                 isActive={activePage === "series"}
               />
             </ul>
