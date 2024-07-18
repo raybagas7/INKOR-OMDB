@@ -5,6 +5,8 @@ import React from "react";
 import styles from "./MovieList.module.scss";
 import MovieCard from "../MovieCard/MovieCard";
 import MovieCardSkeleton from "../MovieCard/MovieCardSkeleton";
+import Link from "next/link";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const MoviesList = ({
   search = "Marvel",
@@ -40,8 +42,11 @@ const MoviesList = ({
         <p>
           <span className={styles.search_title}>{search}</span>
           {" - "}
-          <span className={styles.type}>{type}</span>
+          <span className={styles.type}>{type} </span>
         </p>
+        <Link href={`/search/${type}/${search}`}>
+          <span>See more</span> <RiArrowRightSLine />
+        </Link>
       </div>
       <div className={styles.movie_list_container}>
         {movies?.Search.map((movie) => (

@@ -2,6 +2,7 @@
 
 .list_title {
   padding: 12px 12px 0px 12px;
+  display: flex;
 
   .search_title {
     font-weight: bold;
@@ -9,6 +10,17 @@
 
   .type {
     text-transform: capitalize;
+  }
+
+  a {
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    font-size: smaller;
+  }
+
+  a :hover {
+    color: $secondary;
   }
 }
 
