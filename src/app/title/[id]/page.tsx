@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./page.module.scss";
 
 import type { Metadata } from "next";
-import MovieDescription from "@/components/MovieDescription/MovieDescription";
+import MovieArticle from "@/components/MovieArticle/MovieArticle";
 
 const getMovieDetail = async (id: string): Promise<MovieDetail> => {
   const response = await fetch(
@@ -38,7 +38,7 @@ const TitlePage = async ({ params }: { params: { id: string } }) => {
   return (
     <>
       <main className={styles.main_container}>
-        <MovieDescription movieDetail={movieDetail} />
+        <MovieArticle movieDetail={movieDetail} />
       </main>
     </>
   );
