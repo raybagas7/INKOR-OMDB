@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { LiaImdb } from "react-icons/lia";
 import Badge from "../ui/Badge/Badge";
 import Link from "next/link";
+import Button from "../ui/Button/Button";
 
 const MovieCard = ({ Title, Year, imdbID, Type, Poster }: Movies) => {
   return (
@@ -36,7 +37,11 @@ const MovieCard = ({ Title, Year, imdbID, Type, Poster }: Movies) => {
               <Badge>{Year}</Badge>
             </div>
           </div>
-          <Link href={`/title/${imdbID}`}>Link</Link>
+          <Link href={`/title/${imdbID}`}>
+            <Button variant="primary" size="small">
+              Detail
+            </Button>
+          </Link>
           <div className={style.movie_imdb}>
             <LiaImdb style={{ fontSize: "24px" }} />
             <p>{imdbID}</p>
