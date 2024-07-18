@@ -1,0 +1,26 @@
+.ratings_container {
+  display: flex;
+
+  .rating_box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+    font-size: 24px;
+
+    .icon {
+      font-size: 36px;
+    }
+
+    .rating_value {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}

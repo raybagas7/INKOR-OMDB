@@ -4,22 +4,22 @@ import styles from "./MovieDescription.module.scss";
 import Bagde from "../ui/Badge/Badge";
 
 interface Props {
-  Title: string;
-  Poster: string;
-  Genre: string;
-  Plot: string;
+  title: string;
+  poster: string;
+  genre: string;
+  plot: string;
 }
 
-const MovieDescription = ({ Title, Poster, Genre, Plot }: Props) => {
-  const genres = Genre.split(",");
+const MovieDescription = ({ title, poster, genre, plot }: Props) => {
+  const genres = genre.split(",");
 
   return (
     <section className={styles.movie_article_container}>
       <div className={styles.movie_poster_box}>
         <Image
           style={{ objectFit: "cover", width: "100%", height: "100%" }}
-          alt={Title}
-          src={Poster}
+          alt={title}
+          src={poster}
           height={300}
           width={200}
           priority
@@ -34,7 +34,7 @@ const MovieDescription = ({ Title, Poster, Genre, Plot }: Props) => {
           ))}
         </div>
         <div className={styles.movie_plot_box}>
-          <p>{Plot}</p>
+          <p>{plot}</p>
         </div>
       </div>
     </section>
