@@ -17,7 +17,15 @@
 
     @include media(">tablet") {
       min-height: 300px;
+      max-height: 300px;
       max-width: 200px;
+      min-width: 200px;
+    }
+    @include media(">desktop") {
+      min-height: 420px;
+      max-height: 420px;
+      max-width: 280px;
+      min-width: 280px;
     }
   }
 
@@ -28,15 +36,23 @@
       gap: 4px;
 
       p {
-        font-size: 0.75rem;
+        font-size: 12px;
         color: black;
+
+        @include media(">tablet") {
+          font-size: 14px;
+        }
       }
     }
 
     .movie_plot_box {
       margin-top: 10px;
       p {
-        font-size: 0.85rem;
+        line-height: 22px;
+        font-size: 12px;
+        @include media(">tablet") {
+          font-size: 14px;
+        }
       }
     }
   }

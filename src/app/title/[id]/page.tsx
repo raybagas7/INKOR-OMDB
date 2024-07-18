@@ -36,7 +36,7 @@ const TitlePage = async ({ params }: { params: { id: string } }) => {
 
   return (
     <>
-      <main className={styles.main_container}>
+      <main className={styles.main_detail_movie_container}>
         <MovieArticle movieDetail={movieDetail} />
       </main>
     </>

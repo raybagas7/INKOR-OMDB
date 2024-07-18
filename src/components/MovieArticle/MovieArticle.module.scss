@@ -6,3 +6,15 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.movie_article_detail_information {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include media(">desktop") {
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

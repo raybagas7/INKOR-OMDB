@@ -60,7 +60,7 @@ const MovieFacts = ({
       </div>
       <div>
         <div className={styles.movie_score}>
-          <h2>Score</h2>
+          <h2>Scores</h2>
         </div>
         <div className={styles.score_box}>
           <p>Meta Score: {metascore}</p>

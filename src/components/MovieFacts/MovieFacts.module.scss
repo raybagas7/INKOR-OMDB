@@ -5,12 +5,19 @@
   border: $info solid 1px;
   border-radius: 10px;
   overflow: hidden;
+  @include media(">tablet") {
+    font-size: 14px;
+  }
 
   .section_title {
     background-color: $info;
     padding: 8px;
     h3 {
-      font-size: 18px;
+      font-size: 14px;
+
+      @include media(">tablet") {
+        font-size: 18px;
+      }
     }
   }
   .facts_box {
@@ -28,8 +35,8 @@
 
   .score_box {
     padding: 12px 8px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
 

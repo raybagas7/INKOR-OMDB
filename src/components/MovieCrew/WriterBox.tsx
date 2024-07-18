@@ -8,7 +8,7 @@ interface Props {
 
 const WriterBox = ({ writerList }: Props) => {
   return (
-    <div className={styles.crew_box}>
+    <div className={styles.middle_crew_box}>
       <Accordion
         title={<h3>Writer</h3>}
         itemContent={

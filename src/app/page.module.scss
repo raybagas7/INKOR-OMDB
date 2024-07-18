@@ -16,6 +16,19 @@
   color: white;
 }
 
+.main_detail_movie_container {
+  background-color: $primaryBg;
+  min-height: 100dvh;
+  color: white;
+
+  @include media(">tablet") {
+    padding: 0px 32px;
+  }
+  @include media(">desktop") {
+    padding: 0px 200px;
+  }
+}
+
 .main_container_loading {
   background-color: $primaryBg;
   min-height: 100dvh;

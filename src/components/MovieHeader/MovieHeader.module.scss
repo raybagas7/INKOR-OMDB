@@ -1,9 +1,21 @@
+@import "@/styles/index.module.scss";
+
 .movie_header_container {
+  @include media(">tablet") {
+    h1 {
+      font-size: 32px;
+    }
+  }
+
   .sub_header {
     margin-top: 10px;
     font-size: 12px;
     display: flex;
     justify-content: space-between;
+
+    @include media(">tablet") {
+      font-size: 18px;
+    }
 
     .rated_runtime {
       display: flex;

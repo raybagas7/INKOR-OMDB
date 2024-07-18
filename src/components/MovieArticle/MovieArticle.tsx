@@ -26,26 +26,28 @@ const MovieArticle = ({ movieDetail }: Props) => {
         genre={movieDetail.Genre}
       />
       <MovieRating ratings={movieDetail.Ratings} />
-      <MovieCrew
-        director={movieDetail.Director}
-        writer={movieDetail.Writer}
-        actors={movieDetail.Actors}
-      />
-      <MovieFacts
-        language={movieDetail.Language}
-        country={movieDetail.Country}
-        awards={movieDetail.Awards}
-        metascore={movieDetail.Metascore}
-        imdbRating={movieDetail.imdbRating}
-        imdbVotes={movieDetail.imdbVotes}
-        imdbID={movieDetail.imdbID}
-        type={movieDetail.Type}
-        dvd={movieDetail.DVD}
-        boxOffice={movieDetail.BoxOffice}
-        production={movieDetail.Production}
-        website={movieDetail.Website}
-        totalSeasons={movieDetail.totalSeasons && movieDetail.totalSeasons}
-      />
+      <article className={styles.movie_article_detail_information}>
+        <MovieCrew
+          director={movieDetail.Director}
+          writer={movieDetail.Writer}
+          actors={movieDetail.Actors}
+        />
+        <MovieFacts
+          language={movieDetail.Language}
+          country={movieDetail.Country}
+          awards={movieDetail.Awards}
+          metascore={movieDetail.Metascore}
+          imdbRating={movieDetail.imdbRating}
+          imdbVotes={movieDetail.imdbVotes}
+          imdbID={movieDetail.imdbID}
+          type={movieDetail.Type}
+          dvd={movieDetail.DVD}
+          boxOffice={movieDetail.BoxOffice}
+          production={movieDetail.Production}
+          website={movieDetail.Website}
+          totalSeasons={movieDetail.totalSeasons && movieDetail.totalSeasons}
+        />
+      </article>
     </article>
   );
 };

@@ -8,13 +8,13 @@
     display: flex;
     justify-content: space-between;
     padding: 8px 4px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     width: 100%;
     cursor: pointer;
 
     @include media(">tablet") {
-      display: none;
+      font-size: 14px;
     }
 
     &:hover > .title {
