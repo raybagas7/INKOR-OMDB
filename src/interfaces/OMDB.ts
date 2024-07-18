@@ -9,3 +9,8 @@ interface Movies {
   Type: string;
   Poster: string;
 }
+
+interface SearchOptionalParameter {
+  search?: string;
+  type?: "movie" | "series" | "episode";
+}

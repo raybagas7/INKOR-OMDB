@@ -56,11 +56,12 @@
       }
 
       .movie_sub_information {
+        margin-top: 4px;
         display: flex;
         gap: 4px;
-        p {
-          font-size: 0.7rem;
-        }
+        font-size: 0.6rem;
+        justify-content: space-between;
+        align-items: center;
         text-transform: capitalize;
       }
 

@@ -6,18 +6,17 @@ import styles from "./MovieList.module.scss";
 import MovieCard from "../MovieCard/MovieCard";
 import MovieCardSkeleton from "../MovieCard/MovieCardSkeleton";
 
-interface Props {
-  movieSearch?: string;
-}
-
-const MoviesList = ({ movieSearch = "Marvel" }: Props) => {
+const MoviesList = ({
+  search = "Marvel",
+  type = "movie",
+}: SearchOptionalParameter) => {
   const skeletonCards = new Array(7).fill(null);
   const { data: movies, isLoading } = useQuery({
-    queryKey: ["movie-list", movieSearch],
+    queryKey: ["movie-list", search, type],
     queryFn: async () =>
       agent.Movie.list(1, {
-        type: "movie",
-        s: movieSearch,
+        s: search,
+        type: type,
         r: "json",
       }),
   });
@@ -25,10 +24,10 @@ const MoviesList = ({ movieSearch = "Marvel" }: Props) => {
   if (isLoading) {
     return (
       <div>
-        <div className={styles.list_title}>{movieSearch} Movie</div>
+        <div className={styles.list_title}>{search} Movie</div>
         <div className={styles.movie_list_container}>
           {skeletonCards.map((_, index) => (
-            <MovieCardSkeleton key={`${movieSearch}-${index}`} />
+            <MovieCardSkeleton key={`${search}-${index}`} />
           ))}
         </div>
       </div>
@@ -37,7 +36,13 @@ const MoviesList = ({ movieSearch = "Marvel" }: Props) => {
 
   return (
     <div>
-      <div className={styles.list_title}>{movieSearch} Movie</div>
+      <div className={styles.list_title}>
+        <p>
+          <span className={styles.search_title}>{search}</span>
+          {" - "}
+          <span className={styles.type}>{type}</span>
+        </p>
+      </div>
       <div className={styles.movie_list_container}>
         {movies?.Search.map((movie) => (
           <MovieCard key={movie.imdbID} {...movie} />

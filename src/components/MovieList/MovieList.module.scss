@@ -2,6 +2,14 @@
 
 .list_title {
   padding: 12px 12px 0px 12px;
+
+  .search_title {
+    font-weight: bold;
+  }
+
+  .type {
+    text-transform: capitalize;
+  }
 }
 
 .movie_list_container {

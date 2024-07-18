@@ -3,6 +3,7 @@ import style from "./MovieCard.module.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { LiaImdb } from "react-icons/lia";
+import Badge from "../Badge/Badge";
 
 const MovieCard = ({ Title, Year, imdbID, Type, Poster }: Movies) => {
   return (
@@ -30,8 +31,8 @@ const MovieCard = ({ Title, Year, imdbID, Type, Poster }: Movies) => {
           <div>
             <h5>{Title}</h5>
             <div className={style.movie_sub_information}>
-              <p>{Year}</p>
               <p>{Type}</p>
+              <Badge>{Year}</Badge>
             </div>
           </div>
           <div className={style.movie_imdb}>
