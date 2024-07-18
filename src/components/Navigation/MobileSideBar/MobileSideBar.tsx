@@ -83,19 +83,21 @@ const MobileSideBar = ({ children }: Props) => {
               <ListNavigation
                 name="Home"
                 to="/"
-                onClick={() => setAsideHide(true)}
+                onClick={() => setAsideHide(false)}
                 icon={<RiListOrdered />}
                 isActive={activePage === "home"}
               />
               <ListNavigation
                 name="Movies"
                 to="/movies"
+                onClick={() => setAsideHide(false)}
                 icon={<RiListOrdered />}
                 isActive={activePage === "movie"}
               />
               <ListNavigation
                 name="Series"
                 to="/series"
+                onClick={() => setAsideHide(false)}
                 icon={<RiListOrdered />}
                 isActive={activePage === "series"}
               />
