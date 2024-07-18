@@ -1,0 +1,14 @@
+.movie_header_container {
+  .sub_header {
+    margin-top: 10px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+
+    .rated_runtime {
+      display: flex;
+      font-weight: bold;
+      gap: 10px;
+    }
+  }
+}
