@@ -11,8 +11,6 @@ interface Props {
 }
 
 const MovieArticle = ({ movieDetail }: Props) => {
-  console.log(movieDetail);
-
   return (
     <article className={styles.movie_article_container}>
       <MovieHeader

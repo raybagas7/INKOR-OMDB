@@ -33,7 +33,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const TitlePage = async ({ params }: { params: { id: string } }) => {
   const movieDetail = await getMovieDetail(params.id);
-  console.log(movieDetail);
 
   return (
     <>

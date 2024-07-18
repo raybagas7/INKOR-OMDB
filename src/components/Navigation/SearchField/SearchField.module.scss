@@ -1,5 +1,33 @@
+@import "@/styles/index.module.scss";
+
 .search_form_container {
   position: absolute;
   top: 72px;
   width: 100%;
+
+  .radio_group_type {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 8px;
+    gap: 8px;
+
+    .radio_muted {
+      padding: 4px 12px;
+      border-radius: 10px;
+      background-color: $muted;
+      cursor: pointer;
+    }
+
+    .radio_active {
+      padding: 4px 12px;
+      border-radius: 10px;
+      background-color: $primary;
+      cursor: pointer;
+    }
+
+    input {
+      display: none;
+    }
+  }
 }

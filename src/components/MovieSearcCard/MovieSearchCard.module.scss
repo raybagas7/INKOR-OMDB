@@ -1,10 +1,6 @@
 @import "@/styles/index.module.scss";
 .movie_card_container {
   position: relative;
-  min-height: 189px;
-  max-height: 189px;
-  min-width: 128px;
-  max-width: 128px;
   cursor: pointer;
   display: flex;
   box-shadow:
@@ -23,6 +19,28 @@
   .movie_card {
     height: 100%;
     width: 100%;
+    position: relative;
+
+    .short_box {
+      position: absolute;
+      background-color: rgb(15, 76, 117, 0.75);
+      bottom: 0;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h5 {
+        padding: 0px 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        line-clamp: 2;
+      }
+    }
   }
 
   .movie_information_container {

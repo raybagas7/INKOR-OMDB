@@ -1,12 +1,12 @@
 import React from "react";
-import style from "./MovieCard.module.scss";
+import style from "./MovieSearchCard.module.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { LiaImdb } from "react-icons/lia";
 import Badge from "../ui/Badge/Badge";
 import Link from "next/link";
 
-const MovieCard = ({ Title, Year, imdbID, Type, Poster }: Movies) => {
+const MovieSearchCard = ({ Title, Year, imdbID, Type, Poster }: Movies) => {
   return (
     <motion.div
       className={style.movie_card_container}
@@ -14,6 +14,11 @@ const MovieCard = ({ Title, Year, imdbID, Type, Poster }: Movies) => {
       whileHover={{ scale: 1.05 }}
     >
       <motion.div className={style.movie_card}>
+        <div className={style.short_box}>
+          <div className={style.title}>
+            <h5>{Title}</h5>
+          </div>
+        </div>
         <Image
           style={{ objectFit: "cover", width: "100%", height: "100%" }}
           alt={Title}
@@ -50,4 +55,4 @@ const MovieCard = ({ Title, Year, imdbID, Type, Poster }: Movies) => {
   );
 };
 
-export default MovieCard;
+export default MovieSearchCard;

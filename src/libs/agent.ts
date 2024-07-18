@@ -37,6 +37,32 @@ const Movie = {
       throw new Error("Failed to fetch movies");
     }
   },
+  listPage: async (
+    pageParam: number,
+    query: ApiSearchParam,
+  ): Promise<{
+    data: Movies[];
+    currentPage: number;
+    nextPage: number | null;
+  }> => {
+    try {
+      const movies = await request.get("", query, pageParam);
+
+      if (!movies) {
+        throw new Error("Failed to fetch data from OMDB");
+      }
+
+      const data: Movies[] = movies.Search;
+
+      return {
+        data,
+        currentPage: pageParam,
+        nextPage: data.length > 0 ? pageParam + 1 : null,
+      };
+    } catch (error) {
+      throw new Error("Failed to fetch data from OMDB");
+    }
+  },
 };
 
 const agent = {
