@@ -17,7 +17,9 @@ const MovieHeader = ({ title, rated, released, runtime }: Props) => {
         <p>Release date: {released}</p>
         <div className={styles.rated_runtime}>
           <p>{runtime}</p>
-          <Badge>{rated}</Badge>
+          <Badge>
+            <p>{rated}</p>
+          </Badge>
         </div>
       </div>
     </section>

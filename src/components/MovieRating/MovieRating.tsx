@@ -8,6 +8,8 @@ interface Props {
 }
 
 const MovieRating = ({ ratings }: Props) => {
+  console.log(ratings);
+
   return (
     <section className={styles.ratings_container}>
       {ratings.map((rating) => {
