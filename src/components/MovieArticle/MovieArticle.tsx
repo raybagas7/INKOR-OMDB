@@ -46,6 +46,7 @@ const MovieArticle = ({ movieDetail }: Props) => {
         boxOffice={movieDetail.BoxOffice}
         production={movieDetail.Production}
         website={movieDetail.Website}
+        totalSeasons={movieDetail.totalSeasons && movieDetail.totalSeasons}
       />
     </article>
   );

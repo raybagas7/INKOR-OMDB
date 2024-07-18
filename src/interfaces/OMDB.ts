@@ -41,6 +41,7 @@ interface MovieDetail {
   Production: string;
   Website: string;
   Response: string;
+  totalSeasons?: string;
 }
 
 interface Rating {

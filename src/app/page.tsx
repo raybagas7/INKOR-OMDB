@@ -25,6 +25,22 @@ export default function Home() {
       search: "Cartoon",
       type: "movie",
     },
+    {
+      search: "Fight",
+      type: "movie",
+    },
+    {
+      search: "Spongebob",
+      type: "movie",
+    },
+    {
+      search: "The Boys",
+      type: "series",
+    },
+    {
+      search: "Girl",
+      type: "series",
+    },
   ];
   return (
     <main className={styles.main_container}>

@@ -20,6 +20,7 @@ interface Props {
   boxOffice: string;
   production: string;
   website: string;
+  totalSeasons?: string;
 }
 
 const MovieFacts = ({
@@ -35,6 +36,7 @@ const MovieFacts = ({
   boxOffice,
   production,
   website,
+  totalSeasons,
 }: Props) => {
   return (
     <section className={styles.movie_facts_container}>
@@ -53,6 +55,7 @@ const MovieFacts = ({
           <p>Language: {language}</p>
           <p>Country: {country}</p>
           <p style={{ textTransform: "capitalize" }}>Type: {type}</p>
+          {totalSeasons && <p>Total Seasons: {totalSeasons}</p>}
         </div>
       </div>
       <div>
