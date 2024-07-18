@@ -4,6 +4,7 @@ import MovieDescription from "../MovieDescription/MovieDescription";
 import MovieRating from "../MovieRating/MovieRating";
 import MovieHeader from "../MovieHeader/MovieHeader";
 import MovieCrew from "../MovieCrew/MovieCrew";
+import MovieFacts from "../MovieFacts/MovieFacts";
 
 interface Props {
   movieDetail: MovieDetail;
@@ -31,6 +32,20 @@ const MovieArticle = ({ movieDetail }: Props) => {
         director={movieDetail.Director}
         writer={movieDetail.Writer}
         actors={movieDetail.Actors}
+      />
+      <MovieFacts
+        language={movieDetail.Language}
+        country={movieDetail.Country}
+        awards={movieDetail.Awards}
+        metascore={movieDetail.Metascore}
+        imdbRating={movieDetail.imdbRating}
+        imdbVotes={movieDetail.imdbVotes}
+        imdbID={movieDetail.imdbID}
+        type={movieDetail.Type}
+        dvd={movieDetail.DVD}
+        boxOffice={movieDetail.BoxOffice}
+        production={movieDetail.Production}
+        website={movieDetail.Website}
       />
     </article>
   );

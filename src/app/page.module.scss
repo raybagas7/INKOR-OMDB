@@ -3,6 +3,7 @@
 .main_container {
   background-color: $primaryBg;
   min-height: 100dvh;
+  color: white;
 
   @include media(">tablet") {
     padding: 0px 200px;

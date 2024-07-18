@@ -9,7 +9,7 @@ interface Props {
 
 const MovieRating = ({ ratings }: Props) => {
   return (
-    <div className={styles.ratings_container}>
+    <section className={styles.ratings_container}>
       {ratings.map((rating) => {
         switch (rating.Source) {
           case "Internet Movie Database":
@@ -44,7 +44,7 @@ const MovieRating = ({ ratings }: Props) => {
             return;
         }
       })}
-    </div>
+    </section>
   );
 };
 

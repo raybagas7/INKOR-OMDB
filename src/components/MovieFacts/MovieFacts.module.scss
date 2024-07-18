@@ -1,0 +1,75 @@
+@import "@/styles/index.module.scss";
+
+.movie_facts_container {
+  font-size: 12px;
+  border: $info solid 1px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .section_title {
+    background-color: $info;
+    padding: 8px;
+    h3 {
+      font-size: 18px;
+    }
+  }
+  .facts_box {
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .award_box {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+  }
+
+  .score_box {
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .movie_score {
+    background-color: $info;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+
+    h2 {
+      font-size: 14px;
+    }
+  }
+
+  .movie_media {
+    background-color: $info;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+
+    h2 {
+      font-size: 14px;
+    }
+  }
+
+  .media_box {
+    padding: 12px 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .media_icon_box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 4px;
+
+      .icon {
+        font-size: 22px;
+      }
+    }
+  }
+}

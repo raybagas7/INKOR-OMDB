@@ -17,6 +17,10 @@
       display: none;
     }
 
+    &:hover > .title {
+      color: $secondary;
+    }
+
     .icon {
       font-size: 20px;
     }
