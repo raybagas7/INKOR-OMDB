@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./MovieDescription.module.scss";
-import Bagde from "../ui/Badge/Badge";
+import Badge from "../ui/Badge/Badge";
 
 interface Props {
   title: string;
@@ -28,9 +28,9 @@ const MovieDescription = ({ title, poster, genre, plot }: Props) => {
       <div className={styles.movie_information}>
         <div className={styles.movie_genres}>
           {genres.map((genres) => (
-            <Bagde key={genres}>
+            <Badge key={genres}>
               <p>{genres}</p>
-            </Bagde>
+            </Badge>
           ))}
         </div>
         <div className={styles.movie_plot_box}>

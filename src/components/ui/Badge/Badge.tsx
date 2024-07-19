@@ -5,8 +5,8 @@ interface Props {
   children: ReactNode;
 }
 
-const Bagde = ({ children }: Props) => {
+const Badge = ({ children }: Props) => {
   return <div className={style.badge_box}>{children}</div>;
 };
 
-export default Bagde;
+export default Badge;

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./MovieFacts.module.scss";
 import { FaAward } from "react-icons/fa6";
-import Bagde from "../ui/Badge/Badge";
+import Badge from "../ui/Badge/Badge";
 import { FcDvdLogo } from "react-icons/fc";
 import { GrInProgress } from "react-icons/gr";
 import { FaGlobe } from "react-icons/fa";
@@ -46,10 +46,10 @@ const MovieFacts = ({
         </div>
         <div className={styles.facts_box}>
           <div className={styles.award_box}>
-            <Bagde>
+            <Badge>
               <FaAward style={{ color: "#000000" }} />
               <p>Award</p>
-            </Bagde>
+            </Badge>
             <p>{awards}</p>
           </div>
           <p>Language: {language}</p>
