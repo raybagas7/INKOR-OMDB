@@ -8,15 +8,13 @@ interface Props {
 }
 
 const MovieRating = ({ ratings }: Props) => {
-  console.log(ratings);
-
   return (
     <section className={styles.ratings_container}>
       {ratings.map((rating) => {
         switch (rating.Source) {
           case "Internet Movie Database":
             return (
-              <div className={styles.rating_box}>
+              <div key={rating.Source} className={styles.rating_box}>
                 <SiImdb className={styles.icon} />
                 <div className={styles.rating_value}>
                   <FaStar />
@@ -26,7 +24,7 @@ const MovieRating = ({ ratings }: Props) => {
             );
           case "Rotten Tomatoes":
             return (
-              <div className={styles.rating_box}>
+              <div key={rating.Source} className={styles.rating_box}>
                 <SiRottentomatoes className={styles.icon} />
                 <div className={styles.rating_value}>
                   <p>{rating.Value}</p>
@@ -35,7 +33,7 @@ const MovieRating = ({ ratings }: Props) => {
             );
           case "Metacritic":
             return (
-              <div className={styles.rating_box}>
+              <div key={rating.Source} className={styles.rating_box}>
                 <SiMetacritic className={styles.icon} />
                 <div className={styles.rating_value}>
                   <p>{rating.Value}</p>

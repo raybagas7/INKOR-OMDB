@@ -18,7 +18,9 @@ const ListNavigation = ({ name, icon, isActive, to, onClick }: Props) => {
   });
   return (
     <li className={style.linkContainer}>
-      {isActive && <div className={style.active_mark}></div>}
+      {isActive && (
+        <div data-testid="active-list" className={style.active_mark}></div>
+      )}
       <Link
         onClick={onClick && onClick}
         className={linkContainerClasses}
