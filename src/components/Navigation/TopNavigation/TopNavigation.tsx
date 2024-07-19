@@ -44,8 +44,8 @@ const TopNavigation = ({ children, toggleAside }: Props) => {
         <nav>
           <ul>
             <ListNavigation name="Home" to="/" />
-            <ListNavigation name="Movie" to="/" />
-            <ListNavigation name="Series" to="/" />
+            <ListNavigation name="Movie" to="/movies" />
+            <ListNavigation name="Series" to="/series" />
           </ul>
         </nav>
         <div className={styles.right_box}>

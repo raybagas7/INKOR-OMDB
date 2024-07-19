@@ -2,6 +2,7 @@
 import MoviesList from "@/components/MovieList/MoviesList";
 import styles from "./page.module.scss";
 import { Virtuoso } from "react-virtuoso";
+import Metadata from "@/libs/Metadata";
 
 export default function Home() {
   const MovieCategories: SearchOptionalParameter[] = [
@@ -43,20 +44,23 @@ export default function Home() {
     },
   ];
   return (
-    <main className={styles.main_home_container}>
-      <Virtuoso
-        data={MovieCategories}
-        itemContent={(index, category) => {
-          return (
-            <MoviesList
-              key={`${index}-${category.search}-${category.type}`}
-              search={category.search}
-              type={category.type}
-            />
-          );
-        }}
-        useWindowScroll
-      />
-    </main>
+    <>
+      <Metadata seoTitle="Home" />
+      <main className={styles.main_home_container}>
+        <Virtuoso
+          data={MovieCategories}
+          itemContent={(index, category) => {
+            return (
+              <MoviesList
+                key={`${index}-${category.search}-${category.type}`}
+                search={category.search}
+                type={category.type}
+              />
+            );
+          }}
+          useWindowScroll
+        />
+      </main>
+    </>
   );
 }
