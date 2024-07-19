@@ -27,6 +27,8 @@ This Web Application use OMDB open api to create, this application show the info
 
 ## Installation / Run Locally
 
+The .env file for this project just provided/shared, it contain only free OMDB API secret
+
 Clone the project
 
 ```bash
