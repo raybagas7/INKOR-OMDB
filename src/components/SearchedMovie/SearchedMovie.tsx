@@ -4,6 +4,7 @@ import React from "react";
 import { Virtuoso } from "react-virtuoso";
 import styles from "./SearchedMovie.module.scss";
 import MovieSearchCard from "../MovieSearcCard/MovieSearchCard";
+import NotFoundMovies from "./NotFoundMovies";
 
 interface Props {
   type: "movie" | "episode" | "series";
@@ -28,7 +29,7 @@ const SearchedMovie = ({ type, title }: Props) => {
   };
 
   if (isError) {
-    return <p>Movies not found</p>;
+    return <NotFoundMovies />;
   }
 
   return (
